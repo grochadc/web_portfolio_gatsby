@@ -1,5 +1,6 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
+import { Helmet } from "react-helmet";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,14 +11,14 @@ import MyLayout from "../components/mylayout";
 
 library.add(faGithub);
 
-const GlobalStyle = createGlobalStyle`
-  body{
-    @import url('https://fonts.googleapis.com/css?family=Bungee|Open+Sans|Roboto|Sigmar+One')
-  }`;
-
 const IndexPage = () => (
   <div>
-    <GlobalStyle />
+    <Helmet>
+      <link
+        href="https://fonts.googleapis.com/css?family=Bungee|Open+Sans|Roboto|Sigmar+One"
+        rel="stylesheet"
+      />
+    </Helmet>
     <MyLayout />
   </div>
 );
