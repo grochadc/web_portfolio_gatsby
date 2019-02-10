@@ -42,7 +42,7 @@ const Description = styled.div`
 `;
 
 const SectionTitle = styled.h1`
-  font-family: "Sigmar One", cursive;
+  font-family: "Bungee", sans-serif;
   font-size: 3em;
 `;
 
