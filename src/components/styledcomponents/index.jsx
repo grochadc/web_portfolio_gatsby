@@ -9,6 +9,7 @@ const StyledSection = styled.section`
   min-height: 100vh;
   height: auto;
   width: 100%;
+  padding-top: 50px;
   padding-bottom: 1%;
   color: white;
   display: flex;
@@ -18,9 +19,15 @@ const StyledSection = styled.section`
   :nth-of-type(2n) {
     background-color: white;
     color: #373b44;
+    a {
+      color: #727a8d;
+    }
   }
   :nth-of-type(2n + 3) {
     color: white;
+    a {
+      color: #727a8d;
+    }
   }
 `;
 
@@ -48,6 +55,15 @@ const Footer = styled.footer`
   font-family: "Open Sans", sans-serif;
 `;
 
+const PostersContainer = styled.div`
+  display: flex;
+`;
+
+const Poster = styled.img`
+  margin: 30px;
+  height: 700px;
+`;
+
 export {
   StyledSection,
   ProfileName,
@@ -56,5 +72,7 @@ export {
   List,
   SectionTitle,
   Grid,
-  Footer
+  Footer,
+  PostersContainer,
+  Poster
 };

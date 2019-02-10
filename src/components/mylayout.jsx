@@ -6,6 +6,7 @@ import Section from "./section";
 import Icon from "./icon";
 import VideoGrid from "./videogrid";
 import Video from "./video";
+import VideoSection from "./videosection";
 import {
   ProfilePicture,
   ProfileName,
@@ -13,10 +14,14 @@ import {
   List,
   SectionTitle,
   Grid,
-  Footer
+  Footer,
+  PostersContainer,
+  Poster
 } from "./styledcomponents";
 
 import profilePicture from "../images/gonzo.jpg";
+import cartelChihiro from "../images/El-Viaje-De-Chihiro_Cartel.jpg";
+import cartelHitchcock from "../images/Cartel-Cine-Ciclo-Hitchcock.jpg";
 
 const MyLayout = () => {
   return (
@@ -45,7 +50,7 @@ const MyLayout = () => {
             </p>
             <p>You can check more of my websites in my github: </p>
             <p>
-              <Icon gitub />
+              <Icon name="github" />{" "}
               <a href="https://github.com/grochadc/">gtihub.com/grochadc</a>
             </p>
           </List.Item>
@@ -68,40 +73,41 @@ const MyLayout = () => {
       </Section>
       <Section id="reel">
         <SectionTitle>My reel</SectionTitle>
-        <div>
-          <Grid.Row>
-            <Grid.Col size="md-12">
-              <Video vimeoID="311983548" />
-            </Grid.Col>
-          </Grid.Row>
-          <Grid.Row>
-            <Grid.Col size="md-6">
-              <Video vimeoID="311983548" />
-            </Grid.Col>
-            <Grid.Col size="md-6">
-              <Video vimeoID="311983548" />
-            </Grid.Col>
-          </Grid.Row>
-          <Grid.Row>
-            <Grid.Col size="md-12">
-              <Video vimeoID="311983548" />
-            </Grid.Col>
-          </Grid.Row>
-          <script src="https://player.vimeo.com/api/player.js" />
-        </div>
+        <VideoSection />
+        <span style={{ fontFamily: "Open Sans, sans-serif", padding: "10px" }}>
+          <Icon name="vimeo" /> More on Vimeo:{" "}
+          <a href="https://vimeo.com/medicengonzo">@medicengonzo</a>
+        </span>
+      </Section>
+
+      <Section id="posters">
+        <SectionTitle>POSTER DESIGN</SectionTitle>
+        <PostersContainer>
+          <Poster src={cartelChihiro} />
+          <Poster src={cartelHitchcock} />
+        </PostersContainer>
       </Section>
       <Section id="interests">
         <SectionTitle>MY INTERESTS</SectionTitle>
         <List.Container>
           <List.Item>
+            <span class="icon">
+              <i class="fas fa-film fa-4x" />
+            </span>
             <h1>Directing</h1>
             <p>Ever since my first time at the movies.</p>
           </List.Item>
           <List.Item>
+            <span class="icon">
+              <i class="fas fa-pen-nib fa-4x" />
+            </span>
             <h1>Screenwriting</h1>
             <p>I always wanted to tell stories.</p>
           </List.Item>
           <List.Item>
+            <span class="icon">
+              <i class="fas fa-camera-retro fa-4x" />
+            </span>
             <h1>Cinematography</h1>
             <p>I remember my first camera.</p>
           </List.Item>
@@ -114,7 +120,10 @@ const MyLayout = () => {
           fontFamily: "Open Sans, sans-serif"
         }}
       >
-        <p>Web Design by @medicengonzo</p>
+        <p>
+          Web Design by{" "}
+          <a href="http://twitter.com/medicengonzo">@medicengonzo</a>
+        </p>
       </footer>
     </div>
   );

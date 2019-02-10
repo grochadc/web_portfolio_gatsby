@@ -1,8 +1,16 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const ListContainer = styled.div`
   display: flex;
-  flex-direction: ${props => (props.column ? "column" : "row")};
+  ${props =>
+    props.column
+      ? css`
+          flex-direction: column;
+          width: 40%;
+          margin: auto;
+          text-align: justify;
+        `
+      : null}
   h1 {
     font-family: "Sigmar One", cursive;
   }
@@ -11,7 +19,7 @@ const ListContainer = styled.div`
   }
 `;
 const ListItem = styled.div`
-  width: 250px;
+  width: 100%;
   text-align: left;
   margin: 15px 35px 15px 35px;
   h1 {

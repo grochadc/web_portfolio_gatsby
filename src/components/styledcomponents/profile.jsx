@@ -11,8 +11,8 @@ const ProfileName = styled.h1`
 const ProfilePicture = styled.img`
   width: 300px;
   border-radius: 50%;
-  transform: rotate(90deg);
   margin: 50px 0;
+  border: 4px solid white;
 `;
 
 export { ProfileName, ProfilePicture };
