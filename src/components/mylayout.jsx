@@ -35,7 +35,7 @@ const MyLayout = () => {
           </p>
           <h2>What makes me stand out:</h2>
         </Description>
-        <List.Container>
+        <List.Container column>
           <List.Item>
             <h1>Web Design</h1>
             <p>

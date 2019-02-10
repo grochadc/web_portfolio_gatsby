@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const ListContainer = styled.div`
   display: flex;
+  flex-direction: ${props => (props.column ? "column" : "row")};
   h1 {
     font-family: "Sigmar One", cursive;
   }
