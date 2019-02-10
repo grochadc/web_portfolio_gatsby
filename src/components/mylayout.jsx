@@ -12,7 +12,8 @@ import {
   Description,
   List,
   SectionTitle,
-  Grid
+  Grid,
+  Footer
 } from "./styledcomponents";
 
 import profilePicture from "../images/gonzo.jpg";
@@ -26,7 +27,7 @@ const MyLayout = () => {
         <ProfileName>GONZALO ROCHA</ProfileName>
         <Description>
           {" "}
-          <p>
+          <p style={{ fontFamily: "Open Sans, sans-serif" }}>
             I am a Communication Sciences graduate from Jalisco, Mexico.
             Currently I am teaching Communication and ESL at Universidad de
             Guadalajara. In my spare time I host a film club every semester on
@@ -89,6 +90,32 @@ const MyLayout = () => {
           <script src="https://player.vimeo.com/api/player.js" />
         </div>
       </Section>
+      <Section id="interests">
+        <SectionTitle>MY INTERESTS</SectionTitle>
+        <List.Container>
+          <List.Item>
+            <h1>Directing</h1>
+            <p>Ever since my first time at the movies.</p>
+          </List.Item>
+          <List.Item>
+            <h1>Screenwriting</h1>
+            <p>I always wanted to tell stories.</p>
+          </List.Item>
+          <List.Item>
+            <h1>Cinematography</h1>
+            <p>I remember my first camera.</p>
+          </List.Item>
+        </List.Container>
+      </Section>
+      <footer
+        style={{
+          marginTop: "15px",
+          textAlign: "center",
+          fontFamily: "Open Sans, sans-serif"
+        }}
+      >
+        <p>Web Design by @medicengonzo</p>
+      </footer>
     </div>
   );
 };

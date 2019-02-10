@@ -39,6 +39,15 @@ const SectionTitle = styled.h1`
   font-size: 3em;
 `;
 
+const Footer = styled.footer`
+  background-color: #373b44;
+  color: white;
+  padding-top: 5px;
+  text-align: center;
+  height: 50px;
+  font-family: "Open Sans", sans-serif;
+`;
+
 export {
   StyledSection,
   ProfileName,
@@ -46,5 +55,6 @@ export {
   Description,
   List,
   SectionTitle,
-  Grid
+  Grid,
+  Footer
 };
