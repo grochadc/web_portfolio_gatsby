@@ -29,6 +29,7 @@ const MyLayout = () => {
       <Navbar />
       <Section id="intro">
         <ProfilePicture src={profilePicture} />
+        <Image />
         <ProfileName>GONZALO ROCHA</ProfileName>
         <Description>
           {" "}
