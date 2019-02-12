@@ -20,6 +20,7 @@ const VideoSection = () => {
           <div className="col-md-12">
             <VideoContainer>
               <iframe
+                title="video4"
                 src="https://player.vimeo.com/video/97610630?color=ffffff"
                 style={{
                   position: "absolute",
@@ -40,6 +41,7 @@ const VideoSection = () => {
           <div className="col-md-6">
             <VideoContainer size>
               <iframe
+                title="video1"
                 src="https://player.vimeo.com/video/293291428?color=ffffff"
                 style={{
                   position: "absolute",
@@ -58,6 +60,7 @@ const VideoSection = () => {
           <div className="col-md-6">
             <VideoContainer size>
               <iframe
+                title="video2"
                 src="https://player.vimeo.com/video/294508362?color=ffffff"
                 style={{
                   position: "absolute",
@@ -78,6 +81,7 @@ const VideoSection = () => {
           <div className="col-md-12">
             <VideoContainer>
               <iframe
+                title="video3"
                 src="https://player.vimeo.com/video/282124929?color=ffffff"
                 style={{
                   position: "absolute",

@@ -1,4 +1,5 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+import Img from "gatsby-image";
 import List from "./list";
 import { ProfileName, ProfilePicture } from "./profile.jsx";
 import Grid from "./grid";
@@ -59,7 +60,7 @@ const PostersContainer = styled.div`
   display: flex;
 `;
 
-const Poster = styled.img`
+const Poster = styled(Img)`
   margin: 30px;
   height: 700px;
 `;

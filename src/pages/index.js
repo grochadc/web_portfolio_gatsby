@@ -5,15 +5,13 @@ import { Helmet } from "react-helmet";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { graphql } from "gatsby";
-import Img from "gatsby-image";
-import styled from "styled-components";
 
 import Navbar from "../components/navbar";
 import Section from "../components/section";
 import Icon from "../components/icon";
 import VideoSection from "../components/videosection";
+import ProfilePicture from "../components/profilepic";
 import {
-  ProfilePicture,
   ProfileName,
   Description,
   List,
@@ -21,16 +19,6 @@ import {
   PostersContainer,
   Poster
 } from "../components/styledcomponents";
-
-import cartelChihiro from "../images/El-Viaje-De-Chihiro_Cartel.jpg";
-import cartelHitchcock from "../images/Cartel-Cine-Ciclo-Hitchcock.jpg";
-
-const StyledImg = styled(Img)`
-  width: 300px;
-  border-radius: 50%;
-  margin: 50px 0;
-  border: 4px solid white;
-`;
 
 library.add(fab);
 const GlobalStyle = createGlobalStyle`a {color: #aaafbb;}`;
@@ -56,7 +44,7 @@ const IndexPage = props => {
       <div>
         <Navbar />
         <Section id="intro">
-          <StyledImg fluid={props.data.profilePic.childImageSharp.fluid} />
+          <ProfilePicture />
           <ProfileName>GONZALO ROCHA</ProfileName>
           <Description>
             {" "}
@@ -114,10 +102,8 @@ const IndexPage = props => {
         <Section id="posters">
           <SectionTitle>POSTER DESIGN</SectionTitle>
           <PostersContainer>
-            <Poster src={cartelChihiro} />
-            <Img fluid={props.data.cartelChihiro.childImageSharp.fluid} />
-            <Poster src={cartelHitchcock} />
-            <Img fluid={props.data.cartelHitchcock.childImageSharp.fluid} />
+            <Poster fluid={props.data.cartelChihiro.childImageSharp.fluid} />
+            <Poster fluid={props.data.cartelHitchcock.childImageSharp.fluid} />
           </PostersContainer>
         </Section>
         <Section id="interests">
@@ -167,13 +153,6 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query {
-    profilePic: file(relativePath: { eq: "gonzo.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
     cartelChihiro: file(
       relativePath: { eq: "El-Viaje-De-Chihiro_Cartel.jpg" }
     ) {

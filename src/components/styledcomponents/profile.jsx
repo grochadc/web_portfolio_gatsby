@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Img from "gatsby-image";
 
 const ProfileName = styled.h1`
   font-family: "Bungee", sans-serif;
@@ -8,7 +9,7 @@ const ProfileName = styled.h1`
   margin: 0;
 `;
 
-const ProfilePicture = styled.img`
+const ProfilePicture = styled(Img)`
   width: 300px;
   border-radius: 50%;
   margin: 50px 0;

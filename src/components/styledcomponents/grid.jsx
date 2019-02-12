@@ -26,7 +26,7 @@ const GridCol = styled.div`
         `
       : null}
   width: ${props =>
-    props.size == "md-12" ? "100%" : props.size == "md-6" ? "50%" : "auto"};
+    props.size === "md-12" ? "100%" : props.size === "md-6" ? "50%" : "auto"};
 `;
 
 const Grid = {
