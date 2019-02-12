@@ -128,21 +128,34 @@ const IndexPage = props => {
                 <i class="fas fa-film fa-4x" />
               </span>
               <h1>Directing</h1>
-              <p>Ever since my first time at the movies.</p>
+              <p>
+                Ever since my first visit to Universal Studios in L.A. I started
+                wondering how movies are made. Now that I know how, I want to
+                tell my own stories.{" "}
+              </p>
             </List.Item>
             <List.Item>
               <span class="icon">
                 <i class="fas fa-pen-nib fa-4x" />
               </span>
               <h1>Screenwriting</h1>
-              <p>I always wanted to tell stories.</p>
+              <p>
+                I always wanted to tell stories but every other medium seemed
+                like incomplete. With Screenwriting and Filmmaking in general I
+                get to tell stories for almost every human sense.
+              </p>
             </List.Item>
             <List.Item>
               <span class="icon">
                 <i class="fas fa-camera-retro fa-4x" />
               </span>
               <h1>Cinematography</h1>
-              <p>I remember my first camera.</p>
+              <p>
+                I am a very visual person and I find images in movies are the
+                most essential part of the journey. I started doing still
+                photography but now I want to understand the moving image as
+                well.
+              </p>
             </List.Item>
           </List.Container>
         </Section>
