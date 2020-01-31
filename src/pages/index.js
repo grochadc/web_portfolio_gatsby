@@ -24,6 +24,7 @@ import {
 
 import cartelChihiro from "../images/El-Viaje-De-Chihiro_Cartel.jpg";
 import cartelHitchcock from "../images/Cartel-Cine-Ciclo-Hitchcock.jpg";
+import cartelCritica from "../images/Taller-Critica.jpg";
 
 const StyledImg = styled(Img)`
   width: 300px;
@@ -118,6 +119,8 @@ const IndexPage = props => {
             <Img fluid={props.data.cartelChihiro.childImageSharp.fluid} />
             <Poster src={cartelHitchcock} />
             <Img fluid={props.data.cartelHitchcock.childImageSharp.fluid} />
+            <Poster src={cartelCritica} />
+            <Img fluid={props.data.cartelCritica.childImageSharp.fluid} />
           </PostersContainer>
         </Section>
         <Section id="interests">
